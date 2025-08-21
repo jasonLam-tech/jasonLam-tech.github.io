@@ -1,11 +1,38 @@
 <header class="bg-blue-900 text-white py-4">
   <div class="container mx-auto px-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Memsa Hong Kong</h1>
-    <nav>
-      <a href="index.html" class="px-4 hover:text-blue-300 font-semibold">Home</a>
-      <a href="about.html" class="px-4 hover:text-blue-300">About</a>
-      <a href="events.html" class="px-4 hover:text-blue-300">Events</a>
-      <a href="contact.html" class="px-4 hover:text-blue-300">Contact</a>
+    <div class="inline-flex items-center">
+      <img src="\images\logo.jpg" alt="Mensa Hong Kong Logo" class="h-8 sm:h-10 mr-2 sm:mr-3">
+      <h1 class="text-xl sm:text-2xl font-bold">Mensa Hong Kong</h1>
+    </div>
+    <!-- Hamburger Button -->
+    <button id="menu-toggle" class="sm:hidden text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <!-- Navigation -->
+    <nav id="nav-menu" class="hidden sm:flex sm:space-x-4">
+      <a href="index.html" class="px-4 py-2 hover:text-blue-300 font-semibold">Home</a>
+      <a href="about.html" class="px-4 py-2 hover:text-blue-300">About</a>
+      <a href="events.html" class="px-4 py-2 hover:text-blue-300">Events</a>
+      <a href="contact.html" class="px-4 py-2 hover:text-blue-300">Contact</a>
+      <a href="login.html" class="px-4 py-2 hover:text-blue-300">Login</a>
+    </nav>
+  </div>
+  <!-- Mobile Menu (Hidden by Default) -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-blue-900 text-white">
+    <nav class="flex flex-col items-center space-y-2 py-4">
+      <a href="index.html" class="px-4 py-2 hover:text-blue-300 font-semibold">Home</a>
+      <a href="about.html" class="px-4 py-2 hover:text-blue-300">About</a>
+      <a href="events.html" class="px-4 py-2 hover:text-blue-300">Events</a>
+      <a href="contact.html" class="px-4 py-2 hover:text-blue-300">Contact</a>
+      <a href="login.html" class="px-4 py-2 hover:text-blue-300">Login</a>
     </nav>
   </div>
 </header>
+<script>
+  // Toggle mobile menu
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
