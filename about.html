@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memsa Hong Kong - About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Header Placeholder -->
+  <div id="header"></div>
+
+  <!-- About Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">About Memsa Hong Kong</h2>
+      <p class="text-lg text-center">Memsa Hong Kong is a vibrant community of over 3,000 members dedicated to fostering intellectual, social, and cultural opportunities. As part of the global Memsa network, we provide a platform for gifted individuals to connect, learn, and grow through various activities and initiatives.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Memsa Hong Kong. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script to Load Header -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
