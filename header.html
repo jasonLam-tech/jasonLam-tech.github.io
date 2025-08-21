@@ -19,7 +19,7 @@
       <a href="login.html" class="px-4 py-2 hover:text-blue-300">Login</a>
     </nav>
   </div>
-  <!-- Mobile Menu (Hidden by Default) -->
+  <!-- Mobile Menu (Initially Hidden) -->
   <div id="mobile-menu" class="hidden sm:hidden bg-blue-900 text-white">
     <nav class="flex flex-col items-center space-y-2 py-4">
       <a href="index.html" class="px-4 py-2 hover:text-blue-300 font-semibold">Home</a>
@@ -30,11 +30,14 @@
     </nav>
   </div>
 </header>
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Toggle mobile menu
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
     });
   });
 </script>
